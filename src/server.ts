@@ -19,7 +19,7 @@ server.use(express.static(path.join(__dirname,'../public')))
 server.use(mainrouter);
 
 server.use((req:Request, res:Response)=>{
-    res.status(404).send("<h2>PÁGINA NÃO ENCOTRADA<h2>")
+    res.status(404).render('pages/404')
 })
 
 server.listen(process.env.PORT)
